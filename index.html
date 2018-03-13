@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" />
+</head>
+<body ng-app="appModule" ng-controller="appController" ng-clock="">
+    
+    <header>
+		<div class="container">
+			<h4>Demos</h4>
+		</div>
+    </header>
+    <section>
+        <div class="container">
+            <table class="table table-striped">
+				<tbody>
+					<tr data-ng-repeat="d in data">
+						<td>{{d.title}}</td>
+						<td><a href="{{d.url}}">{{d.url}}</a></td>
+					</tr>
+				</tbody>
+			</table>
+        </div>
+    </section>
+    <footer>
+       
+    </footer>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
+	<script>
+	
+	var appModule = angular.module('appModule', []);
+	
+	appModule.controller('appController', ['$scope', function($scope){
+	
+		$scope.data=[{
+			title:'AngularJS Demo',
+			url:'http://localhost/WebApplication_Demo/AngularJS'
+		},{
+			title:'Angular4 Demo',
+			url:'http://localhost/WebApplication_Demo/Angular4'
+		}];
+	
+	}]);
+	
+	</script>
+    
+</body>
+</html>
