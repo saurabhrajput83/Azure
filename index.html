@@ -21,7 +21,7 @@
 				<tbody>
 					<tr data-ng-repeat="d in data">
 						<td>{{d.title}}</td>
-						<td><a href="{{d.url}}">{{d.url}}</a></td>
+						<td><a href="{{d.url}}" target="_blank">{{d.url}}</a></td>
 					</tr>
 				</tbody>
 			</table>
@@ -44,10 +44,10 @@
 	
 		$scope.data=[{
 			title:'AngularJS Demo',
-			url:'http://localhost/WebApplication_Demo/AngularJS'
+			url:'http://saurabhrajput83-angularjs.azurewebsites.net/'
 		},{
-			title:'Angular4 Demo',
-			url:'http://localhost/WebApplication_Demo/Angular4'
+			title:'Angular5 Demo',
+			url:'http://saurabhrajput83-angular5.azurewebsites.net/dist/'
 		}];
 	
 	}]);
